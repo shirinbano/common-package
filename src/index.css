@@ -11,3 +11,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.form-control{
+  height: 2.75rem!important;
+}
+
+.btnHeight{
+  height: 2.5625rem;
+}
