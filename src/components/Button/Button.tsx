@@ -12,11 +12,11 @@ interface ButtonProp {
 }
 
 const Button = (props: ButtonProp) => {
-    let buttonClass = `btn ${props.disabled ? "btn-secondary" : props.background || "btn-primary"
-        } ${props.width || "w-100"}  align-self-center d-flex flex-row justify-content-center text-white position-relative btnHeight`;
+    let buttonClass = `btn ${props.disabled ? "bg-passiveOrange" : props.background || "bg-activeOrange"
+        } ${props.width || "w-100"}  align-self-center d-flex flex-row justify-content-center text-white position-relative h-25 btnFont`;
 
     return (
-        <button className={props.className || buttonClass} onClick={!props.disabled ? props.onPress : () => ''}>
+    <button className={` ${props.className || ""} ${buttonClass}`} onClick={!props.disabled ? props.onPress : () => ''}>
             {props.title}
             {props.loading && (
                 <div className="position-fixed" style={{left: 0, right:0}}>

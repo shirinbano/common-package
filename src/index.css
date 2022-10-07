@@ -16,6 +16,22 @@ code {
   height: 2.75rem!important;
 }
 
-.btnHeight{
-  height: 2.5625rem;
+.btnFont{
+  font-family: 'Normal' !important;
+  font-weight: 600 !important;
+  font-size: 16px !important;
+}
+
+.css-6j8wv5-Input{
+  height: 2.2rem;
+}
+
+.loginHeader{
+  height: 50px;
+  padding: 0 21px 0 10px;
+}
+
+.loginHeaderBackIcon{
+  width: 30px;
+  height: 30px;
 }

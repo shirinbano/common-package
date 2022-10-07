@@ -16,7 +16,7 @@ function FormInput(props: FormInputProp) {
                 <textarea
                     // type={props.item.type}
                     inputMode={props.item.keyboardType}
-                    className="form- "
+                    className="form-control"
                     id={`${props.item.id}`}
                     placeholder={props.item.placeHolder || props.item.title}
                     onChange={(v) => props.onChangeText?.(v.target.value)}
