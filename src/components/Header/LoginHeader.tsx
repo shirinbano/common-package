@@ -1,19 +1,23 @@
 import React from "react";
 import BackIcon from '../../Assets/Icons/BackIcon.svg';
-import Logo from '../../Assets/Images/Logo.svg';
+import BaseLogo from "../Images/Logo";
 import Notification from '../../Assets/Icons/Notification.svg';
+import Logo from '../../Assets/Images/Logo.svg';
 
-const LoginHeader = () => {
+interface LoginHeaderProps{
+    headerClass?:string
+}
+const LoginHeader = (props:LoginHeaderProps) => {
     return (
-        <div className="d-flex justify-content-between shadow-sm loginHeader align-items-center">
+        <div className={`d-flex justify-content-between loginHeader align-items-center ${props.headerClass}`}>
             <div className="loginHeaderBackIcon bg-customGray rounded-4 text-center">
                 <img src={BackIcon} />
             </div>
             <div>
-                <img src={Logo} />
+                <BaseLogo logo={Logo} />
             </div>
             <div>
-                <img src={Notification} />
+                {/* <img src={Notification} /> */}
             </div>
         </div>
     )

@@ -2,24 +2,23 @@ import React from "react";
 import Loading from "../Loading/Loading";
 
 interface ButtonProp {
-    className?: string,
     title?: string,
-    background?: string,
-    width?: string | number,
+    customStyle?: string,
     disabled?: boolean,
     loading?: boolean,
-    onPress?: () => any
+    onPress?: (v?:any) => any,
+    id?: any
+
 }
 
 const Button = (props: ButtonProp) => {
-    let buttonClass = `btn ${props.disabled ? "bg-passiveOrange" : props.background || "bg-activeOrange"
-        } ${props.width || "w-100"}  align-self-center d-flex flex-row justify-content-center text-white position-relative h-25 btnFont`;
+    let buttonClass = `btn w-100 align-self-center d-flex flex-row justify-content-center position-relative h-25 btnFont ${props.customStyle}`;
 
     return (
-    <button className={` ${props.className || ""} ${buttonClass}`} onClick={!props.disabled ? props.onPress : () => ''}>
+        <button className={buttonClass} onClick={!props.disabled ? props.onPress : () => ''} id={props.id}>
             {props.title}
             {props.loading && (
-                <div className="position-fixed" style={{left: 0, right:0}}>
+                <div className="position-fixed" style={{ left: 0, right: 0 }}>
                     <Loading />
                 </div>
             )}
