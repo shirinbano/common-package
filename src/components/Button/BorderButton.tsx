@@ -10,7 +10,6 @@ interface ButtonProps {
 }
 
 const BorderButton = (props: ButtonProps) => {
-    console.log(props.customId == props.btnNumber);
     
     return (
         <div>
