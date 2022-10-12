@@ -11,6 +11,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.form-control{
+  width: 100% !important;
+}
 
 .form-control-active{
   display: block;
@@ -107,6 +110,10 @@ code {
   color: #777777;
   padding-left: 13px;
   padding-right: 13px;
+}
+
+.react-tel-input .selected-flag{
+  background-color: white;
 }
 
 
